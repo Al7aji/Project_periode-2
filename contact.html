@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <header>
+        <a href="/index.html" class="logo">
+
+            <img src="/Imags/logo1.png" alt="logo">
+            
+        </a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About me</a></li>
+                <li><a href="#">My Work</a></li>
+                <!-- <li><a href="#">interview </a></li> -->
+                <li><a class="contact-style" href="/contact.html">contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="form-section">
+        <div class="form-container">
+            <h2>Stuur een E-mail</h2>
+            <form action="/verzend_email" method="post">
+                <label for="naam">Naam:</label>
+                <input type="text" id="naam" name="naam" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="onderwerp">Onderwerp:</label>
+                <input type="text" id="onderwerp" name="onderwerp" required>
+
+                <label for="bericht">Bericht:</label>
+                <textarea id="bericht" name="bericht" rows="6" required minlength="12" maxlength="400"></textarea>
+
+                <button type="submit">Verzend E-mail</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
