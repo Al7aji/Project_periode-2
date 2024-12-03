@@ -8,19 +8,30 @@
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: "Josefin Sans", sans-serif;
-    
-    color: #fffffff1;
+    font-family: "Josefin Sans", sans-serif;   
     transition: color 0.3s;
 }
 html{
     scroll-behavior: smooth;
+    
 }
+
+:root {
+    --bg-color:   #000000;
+    --text-color:  #ffffff;
+    --link-color: blue;
+}
+.dark-mode {
+    --bg-color: #ffffff;
+    --text-color:  #000000;
+
+}
+
 
 /* start navbar */
 header{
    
-    background-color: #000000;
+    background-color: var(--bg-color);
     height: 75px;
     width: 100%;
     display: flex;
@@ -37,6 +48,10 @@ header{
     
     
 }
+.navbar{
+     
+     margin-left: 95px ;
+}
 
 .navbar ul {
     display: flex;
@@ -44,8 +59,8 @@ header{
     
 }
 .navbar li a{  
-    color: #fffffff1;
-    margin-right:20px ;
+    color: var(--text-color);
+    margin-right: #ffffffc5 ;
     padding: .6rem 1.5rem;
     border-radius: 20px;
     font-size: 20px;
@@ -54,19 +69,32 @@ header{
     
 }
 .navbar li a:hover{ 
-    color: blue;
+    color:  var(--link-color);
 }
 .navbar .contact-style{
- background-color: blue;
+ background-color:  blue;
  border: 2px solid blue;
-  
+ color:  #ffffff;
 
 }
 .navbar .contact-style:hover{
-   background-color: black;
+   background-color:  #000000;
    color: #ffffffc5;
    
 }
+.dark-mode-toggle {
+    
+    background:  var(--link-color);
+    padding: 2px 4px;
+    border-radius: 20px;
+    
+}
+.dark-mode-toggle img{
+    
+    width: 35px;
+ 
+}
+
 
             /* end navbar */
 
@@ -75,12 +103,12 @@ section{
     
     min-height: 100vh;
     padding: 2rem 9%;
-    background-color: #000000; 
+    background-color: var(--bg-color); 
     width: 100%;
     
 }
 span{
-    color: blue;
+    color: var(--link-color);
     
 }
 
@@ -104,6 +132,7 @@ span{
 
 .content h1{
     font-size: 40PX;
+    color: var(--text-color);
 }
 
 .content .baan {
@@ -115,6 +144,7 @@ span{
 .content p{
     margin-top: 30px;
     font-size: 20PX;
+    color: var(--text-color);
       
 }
 .content .commant{
@@ -132,6 +162,7 @@ span{
   margin:50px 20px;
   padding: .6rem 0.3rem;
   box-shadow: 1px 1px 2px rgba(0, 0, 255, 0.679);
+  color: var(--text-color);
   
 
 }
@@ -156,7 +187,6 @@ span{
     min-height: 90vh;
     min-width: 50vh;
     border-radius: 20%;
-    
     margin-left: 90px;
     
 }
@@ -167,6 +197,7 @@ span{
     padding-top: 94px;
     display: flex;
     flex-direction: column;
+    color: var(--text-color);
     
 }
 
@@ -187,27 +218,30 @@ span{
    margin-top: 3.5rem;
    font-size: 18px;
    width: 30rem;
+   color: var(--text-color);
 }
 
 .cv a{
-    background-color: blue;
-    border: 2px solid blue;
+    background-color: var(--link-color);
+    border: 2px solid var(--link-color);
     padding: .9rem 0.9rem;
     font-weight: 800;
     border-radius: 20px;
+    color: white;
     
 }
 
 
 .about-me .cv a:hover{
-    background-color: black;
-    color: #ffffffc5;
+    background-color: var(--bg-color);
+    color:  var(--text-color);
 }
+
 .video-about video{
     width: 420px;
     height: 250px;
     border-radius: 20px;
-    box-shadow: 0px 8px 20px blue;
+    box-shadow: 0px 8px 20px var(--link-color);
     
 }
 
@@ -221,6 +255,7 @@ span{
     align-items: center;
     justify-content: center;
     height: 100vh;
+    color: var(--text-color);
 
 }
 .Work {
@@ -248,9 +283,9 @@ span{
 .card {
     width: 300px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px blue;
+    box-shadow: 0 4px 8px var(--link-color);
     overflow: hidden;
-    background-color: #000000;
+    background-color:  var(--bg-color);
     text-align: center;
     transition: transform 0.2s ease-in-out;
     margin-right: 4rem;
@@ -273,7 +308,7 @@ span{
     margin: 0;
 }
 .card-content p {
-    color: white;
+    color: var(--text-color);
     font-size: 1em;
     margin: 10px 0;
 }
@@ -281,26 +316,26 @@ span{
     display: inline-block;
     padding: 10px 20px;
     margin-top: 10px;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--link-color);
+    color: var(--text-color);
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.2s;
   }
   .card-button:hover {
-    background-color: #0056b3;
+    background-color: var(--link-color);
   }
                 /* END My-Work */
                 /* Start form-section */
 .form-section {
-    background-color: black;
+    background-color: var(--bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .form-container {
-    background-color: #ffffff;
+    background-color: var(--bg-color);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -310,7 +345,7 @@ span{
 }
 
 .form-container h2 {
-    color:  blue;
+    color:  var(--link-color);
     text-align: center;
     margin-bottom: 20px;
 }
@@ -328,7 +363,7 @@ span{
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid  var(--text-color);
     border-radius: 4px;
     font-size: 14px;
     color: #333;
@@ -339,8 +374,8 @@ span{
 .form-container button {
     width: 100%;
     padding: 10px;
-    background-color: blue;
-    color: white;
+    background-color: var(--link-color);
+    color: var(--text-color);
     border: none;
     border-radius: 4px;
     font-size: 16px;
@@ -349,7 +384,7 @@ span{
 }
 
 .form-container button:hover {
-    background-color: #0056b3;
+    background-color: var(--link-color);
 
 }    
 
@@ -360,8 +395,8 @@ span{
 
 
 footer {
-    background-color:  #000000;
-    color:  blue;
+    background-color:  var(--bg-color);
+    color:  var(--link-color);
     padding: 20px 0;
     font-family: Arial, sans-serif;
 }
@@ -381,13 +416,13 @@ footer {
 }
 
 .footer-section h3 {
-    color: blue;
+    color: var(--text-color);
     margin-bottom: 15px;
 }
 
 .footer-section p, .footer-section ul, .footer-bottom p {
     font-size: 14px;
-    color: #ccc;
+    color: var(--text-color);
 
 }
 
@@ -401,12 +436,12 @@ footer {
 }
 
 .footer-section ul li a {
-    color:  white;
+    color:  var(--text-color);
     
 }
 
 .footer-section ul li a:hover {
-    color:  blue;
+    color:  var(--link-color);
 }
 .socials{
     display: flex;
@@ -426,7 +461,7 @@ footer {
     padding: 30px 0;
     font-size: 14px;
     border-top: 1px solid #323131;
-    color:  blue;
+    color:  var(--link-color);
 }
             /* END footer  */
 
@@ -435,22 +470,26 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(41, 16, 181, 0.548);
+    background-color: rgb(41, 16, 181);
+<<<<<<< HEAD
+    color: var(--text-color);
+=======
     color: white;
+>>>>>>> origin/main
     padding: 10px;
     text-align: center;
     font-size: 16px;
 }
 
 .cookie-message button {
-    background-color: blue;
-    color: white;
+    background-color: var(--link-color);
+    color: var(--text-color);
     border: none;
     padding: 5px 10px;
     cursor: pointer;
 }
 
 .cookie-message button:hover {
-    background-color: #45a049;
+    background-color: var(--text-color);
+    color: #000000;
 }
-            
